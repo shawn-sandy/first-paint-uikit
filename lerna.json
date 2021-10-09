@@ -1,0 +1,10 @@
+{
+  "packages": [
+    "packages/*",
+    "react-components/",
+    "vue-components/",
+    "lit-components/",
+    "svelte-components/"
+  ],
+  "version": "0.0.0"
+}
