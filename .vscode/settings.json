@@ -1,0 +1,47 @@
+{
+  "xd.lastPackage": "/C:/Users/shawn/DSP/11ty-dsp-kit/system/dsp",
+  // settings.json
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "autoprefixer.formatOnSave": true,
+  "javascript.format.semicolons": "remove",
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.tabSize": 2,
+  "workbench.tree.indent": 4,
+  "xd.globalEditor": true,
+  "jshint.options": {
+    "esversion": 6,
+  },
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "eslint.lintTask.enable": true,
+  "eslint.run": "onSave",
+  "yaml.format.singleQuote": true,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "html.suggest.html5": true,
+  "emmet.includeLanguages": {
+    "njk": "html"
+  },
+  "files.associations": {
+    "*.njk": "njk"
+  },
+  "terminal.integrated.automationShell.osx": "",
+  "conventionalCommits.scopes": [
+    "content",
+    "assets",
+    "wip",
+    "update",
+    "accessibility",
+    "tour"
+  ],
+  "cSpell.words": [
+    "lenna"
+  ],
+  "conventionalCommits.lineBreak": "\\n"
+}

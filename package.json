@@ -1,0 +1,93 @@
+{
+  "name": "@fppages/substack",
+  "version": "0.0.1",
+  "config": {
+    "name": "A UI toolkit for building web-apps using First Paint and Eleventy ",
+    "stylesheets": [
+      ""
+    ],
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "description": "FP Pages",
+  "main": "index._js",
+  "scripts": {
+    "startup": "run-p serve watch:*",
+    "start": "run-s scss js && run-p watch:* 11ty",
+    "clean-start": "trash run-s scss js && run-p watch:* 11ty",
+    "serve": "eleventy --serve --incremental",
+    "11ty": "eleventy --serve",
+    "build-11ty": "eleventy",
+    "build": "npx @11ty/eleventy",
+    "clean": "rm -rf www",
+    "trash": "trash www",
+    "scss": "sass --style compressed src/sass:src/css/. --load-path=node_modules",
+    "watch:scss": "sass --style compressed src/sass:src/css/. --load-path=node_modules --watch",
+    "build:scss": "sass --style compressed src/sass:src/css/. --load-path=node_modules",
+    "js": "babel src/js/ -d src/js/min --minified --out-file-extension .min.js",
+    "watch:js": "babel src/js/ -d src/js/min --out-file-extension .min.js  --minified --source-maps --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "git:add": "git add .",
+    "git:cz": "git cz",
+    "git:push": "git push",
+    "commit": "run-s git:add git:cz git:push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shawn-sandy/first-paint-apps.git"
+  },
+  "keywords": [
+    "Design",
+    "System",
+    "11ty",
+    "UIKits"
+  ],
+  "files": [
+    "/**"
+  ],
+  "author": "Shawn Sandy",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shawn-sandy/first-paint-apps/issues"
+  },
+  "homepage": "https://github.com/shawn-sandy/first-paint-apps#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-cache-assets": "^2.3.0",
+    "@11ty/eleventy-img": "^0.10.0",
+    "@11ty/eleventy-navigation": "^0.3.2",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "@shawnsandy/code-clipper": "^0.2.8",
+    "@shawnsandy/ideas": "0.3.5",
+    "clean-css": "^5.2.1",
+    "dayjs": "^1.10.7",
+    "dotenv": "^10.0.0",
+    "html-minifier": "^4.0.0",
+    "jimp": "^0.16.1",
+    "lodash.take": "^4.1.1",
+    "sharp": "^0.29.1",
+    "style-dictionary": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@shawnsandy/first-paint": "^2.0.9",
+    "babel-watch": "^7.5.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "lodash": "^4.17.21",
+    "npm-force-resolutions": "0.0.10",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.42.1",
+    "standard": "^16.0.4",
+    "trash-cli": "^4.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Substack",
+  "subtitle": "A performance first, accessibility focussed custom theme built on FP.Pages & 11ty.",
+  "url": "https://server.dev",
+  "description": "Design, Code, Performance, Usability, Accessibility",
+  "logo_url": "/images/substack-logo.svg",
+  "feed": {
+    "subtitle": "",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://server.dev/"
+  },
+  "author": {
+    "name": "john hannock",
+    "email": "name@mail.dev",
+    "twitter": "@shawnsandy"
+  },
+  "styles": [],
+  "scripts": [
+    "./js/min/index.min.js"
+  ]
+}

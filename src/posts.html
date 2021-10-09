@@ -1,0 +1,15 @@
+---
+layout: category.njk
+title: 'Recent posts'
+tags: page
+category: posts
+eleventyNavigation:
+  key: Blog
+  order: 1
+pagination:
+  data: collections.posts
+  size: 2
+  alias: posts
+---
+
+{% include 'partials/category.njk' %}
