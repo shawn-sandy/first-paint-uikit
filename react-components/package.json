@@ -5,14 +5,21 @@
     "start": "vite --open",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "compile": "cross-env NODE_ENV=production npx babel src/components --out-dir dist --copy-files --watch"
   },
   "dependencies": {
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
     "@vitejs/plugin-react": "^1.0.0",
+    "cross-env": "^7.0.3",
     "vite": "^2.6.4"
   }
 }
