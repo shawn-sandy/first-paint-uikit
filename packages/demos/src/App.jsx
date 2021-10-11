@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import Button from '@shawnsandy/fp-react-uikit/src/components/Buttons/Button'
-
+// import Button from '@shawnsandy/fp-react-uikit/src/components/Buttons/Button'
+import { Button } from '@shawnsandy/fp-react-uikit'
 function App () {
   const [count, setCount] = useState(0)
 
@@ -15,7 +15,7 @@ function App () {
           <button type='button' onClick={() => setCount((count) => count + 1)}>
             count is: {count}
           </button>
-          <Button>MY Button</Button>
+          <Button>My Button</Button>
         </p>
         <p>
           Edit <code>App.jsx</code> and save to test HMR updates.

@@ -1,6 +1,7 @@
 {
   "packages": [
     "packages/demos/",
+    "packages/react-demo/",
     "react-components/",
     "vue-components/",
     "lit-components/",
