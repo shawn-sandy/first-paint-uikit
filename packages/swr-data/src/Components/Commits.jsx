@@ -17,7 +17,8 @@ function Commits ({ repo = 'shawn-sandy/ideas', branch = 'main' }) {
 
   return (
     <section className='app'>
-      <h1>Git commit</h1>
+      <h1>Git commit demo</h1>
+      <hr />
 
       {error !== undefined
         ? 'errors'
