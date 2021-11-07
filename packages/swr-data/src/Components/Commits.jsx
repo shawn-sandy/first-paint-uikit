@@ -13,8 +13,8 @@ function Commits () {
   // console.log(error)
 
   if (error) return 'An error has occurred.'
-  if (!data) return 'Loading...'
-  // console.log(data)
+  if (!data) return (<p className='loading'>Loading...</p>)
+
   return (
     <section className='app'>
       <h1>Git commit</h1>
