@@ -8,6 +8,8 @@
  * create the component and import into index.js see example below
  * run the command in package.json `npm run compile`
  */
+
+// @ts-check
 import Button from './Buttons/Button'
 
 export { Button }
