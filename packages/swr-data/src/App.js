@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css'
+import './Commit.css'
 import Commits from './Components/Commits'
 
 const fetcher = (url) => fetch(url).then((res) => res.json()).catch((err) => console.log(err))

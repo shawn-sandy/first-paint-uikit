@@ -4,9 +4,9 @@ import React from 'react'
 import useSWR from 'swr'
 
 const fetcher = (url) => fetch(url).then((res) => res.json()).catch((err) => console.log(err))
-function Commits () {
+function Commits ({ repo = 'shawn-sandy/ideas', branch = 'main' }) {
   const { data, error } = useSWR(
-    'https://api.github.com/repos/shawn-sandy/ideas/commits?sha=main',
+    `https://api.github.com/repos/${repo}/commits?sha=${branch}`,
     fetcher
   )
   // console.log(data)
@@ -18,19 +18,28 @@ function Commits () {
   return (
     <section className='app'>
       <h1>Git commit</h1>
-      <div>
-        {error !== undefined
-          ? 'errors'
-          : data.map((item) => (
-            <div key={item.sha}>
-              <p>
-                <strong>{item.commit.message}</strong>
-              </p>
-              <p>{item.commit.author.name}</p>
-              <hr />
-            </div>
-          ))}
-      </div>
+
+      {error !== undefined
+        ? 'errors'
+        : data.map((item) => (
+          <div key={item.sha}>
+            <section className='commits'>
+              <div className='avatar'>
+                <img src={item.author.avatar_url} alt='avatar' />
+              </div>
+              <div>
+                <p className='commit-message'>
+                  {item.commit.message}
+                </p>
+
+                <p>{item.commit.author.name}</p>
+
+              </div>
+            </section>
+            <hr />
+          </div>
+        ))}
+
     </section>
   )
 }
