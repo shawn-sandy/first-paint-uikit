@@ -8,12 +8,14 @@ function App () {
     'https://api.github.com/repos/shawn-sandy/ideas/commits?sha=main',
     fetcher
   )
-  console.log(data)
-  console.log(error)
+  // console.log(data)
+  // console.log(error)
+  if (error) return 'An error has occurred.'
+  if (!data) return 'Loading...'
   // console.log(data)
   return (
-    <section className='App'>
-      <h1>Git commits</h1>
+    <section className='app'>
+      <h1>Git commit</h1>
       <div>
         {error
           ? 'errors'
@@ -23,8 +25,8 @@ function App () {
                 <strong>{item.commit.message}</strong>
               </p>
               <p>{item.commit.author.name}</p>
+              <hr />
             </div>
-            <hr />
           ))}
       </div>
     </section>
