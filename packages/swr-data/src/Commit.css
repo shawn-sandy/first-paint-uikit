@@ -1,0 +1,53 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: .9rem;
+  padding: 2rem;
+  padding-inline: 4rem;
+  font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+}
+
+hr {
+  border: 0;
+  border-bottom: thin solid #ccc;
+  margin: 2rem 0;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+
+.loading {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  color: red
+}
+
+.avatar img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.commits {
+  margin-inline: 2rem;
+}
+
+.commit-message {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.commits {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  gap: 1rem;
+}
