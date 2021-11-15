@@ -9,8 +9,6 @@ const fetcher = (url) => fetch(url).then((res) => res.json()).catch((err) => con
 function Commits ({ repo = 'shawn-sandy/ideas', branch = 'main' }) {
   const [repository, setRepository] = useLocalStorageState('repoName', { repo: branch })
 
-
-
   const { data, error } = useSWR(
     `https://api.github.com/repos/${repo}/commits?sha=${branch}`,
     fetcher
@@ -18,9 +16,6 @@ function Commits ({ repo = 'shawn-sandy/ideas', branch = 'main' }) {
 
   if (error) return 'An error has occurred.'
   if (!data) return (<p className='loading'>Loading...</p>)
-  if (data) {
-    // setCommit({ commits: 'data' })
-  }
 
   return (
     <section className='app'>
