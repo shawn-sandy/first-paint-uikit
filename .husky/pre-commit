@@ -3,7 +3,7 @@
 
 # npm test
 echo 'Starting prettier...'
-#npx pretty-quick --staged "$1"
+npx pretty-quick --staged "$1"
 
 # lint-stages
 echo 'Starting eslint...'
