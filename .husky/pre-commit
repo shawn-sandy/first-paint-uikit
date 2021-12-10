@@ -3,11 +3,11 @@
 
 # npm test
 echo 'Starting prettier...'
-npx pretty-quick --staged
+#npx pretty-quick --staged "$1"
 
 # lint-stages
 echo 'Starting eslint...'
-npx lint-staged "$1"
+# npx lint-staged "$1"
 
 # commitizen
 echo 'Starting commitlint...'
