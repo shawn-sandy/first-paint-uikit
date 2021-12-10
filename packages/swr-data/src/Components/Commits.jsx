@@ -9,7 +9,7 @@ const fetcher = (url) =>
     .then((res) => res.json())
     .catch((err) => console.log(err))
 
-function Commits({ repo = 'shawn-sandy/ideas', branch = 'main' }) {
+function Commits ({ repo = 'shawn-sandy/ideas', branch = 'main' }) {
   const [repository, setRepository] = useLocalStorageState('repoName', {
     repo: branch
   })
@@ -20,30 +20,30 @@ function Commits({ repo = 'shawn-sandy/ideas', branch = 'main' }) {
   )
 
   if (error) return 'An error has occurred.'
-  if (!data) return <p className="loading">Loading...</p>
+  if (!data) return <p className='loading'>Loading...</p>
 
   return (
-    <section className="app">
+    <section className='app'>
       <h1>Git commit demo</h1>
       <hr />
 
       {error !== undefined
         ? 'errors'
         : data.map((item) => (
-            <div key={item.sha}>
-              <section className="commits">
-                <div className="avatar">
-                  <img src={item.author.avatar_url} alt="avatar" />
+          <div key={item.sha}>
+              <section className='commits'>
+                <div className='avatar'>
+                  <img src={item.author.avatar_url} alt='avatar' />
                 </div>
                 <div>
-                  <p className="commit-message">{item.commit.message}</p>
+                  <p className='commit-message'>{item.commit.message}</p>
 
                   <p>{item.commit.author.name}</p>
                 </div>
               </section>
               <hr />
             </div>
-          ))}
+        ))}
     </section>
   )
 }
