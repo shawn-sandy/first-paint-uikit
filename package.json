@@ -31,7 +31,8 @@
     "git:add": "git add .",
     "git:cz": "git cz",
     "git:push": "git push",
-    "commit": "run-s git:add git:cz git:push"
+    "commit": "run-s git:add git:cz git:push",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -68,28 +69,43 @@
     "jimp": "^0.16.1",
     "lodash.take": "^4.1.1",
     "sharp": "^0.29.1",
-    "style-dictionary": "^3.0.2"
+    "style-dictionary": "^3.0.2",
+    "swr-data": "file:packages/swr-data/swr-data-0.1.0.tgz"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
     "@shawnsandy/first-paint": "^2.0.9",
     "babel-watch": "^7.5.0",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "husky": "^7.0.0",
     "lerna": "^4.0.0",
     "lodash": "^4.17.21",
     "npm-force-resolutions": "0.0.10",
     "npm-run-all": "^4.1.5",
+    "pretty-quick": "^3.1.2",
     "react-styleguidist": "^11.1.7",
     "sass": "^1.42.1",
     "standard": "^16.0.4",
     "trash-cli": "^4.0.0"
+  },
+  "husky": {
+    "hooks": {}
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.{scss, css}": "stylelint --fix"
   }
 }
